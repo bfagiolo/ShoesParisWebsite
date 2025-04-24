@@ -22,3 +22,8 @@ Core features include:
 This project demonstrates front-end engineering, full CRUD operations with Firebase, reactive form design, and scalable architecture — built from scratch with real-world deployment in mind.
 
 ⚠️ This project is for educational purposes only. Unauthorized copying, distribution, or use of the code without permission is strictly prohibited.
+
+<img width="1440" alt="Screenshot 2025-04-24 at 6 20 55 PM" src="https://github.com/user-attachments/assets/8167bb40-024b-44f6-bd06-b0ff411bccc6" />
+
+
+
