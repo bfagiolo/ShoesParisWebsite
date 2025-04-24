@@ -1,0 +1,33 @@
+
+<div class="container py-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="col" *ngFor="let product of products">
+        <div class="card h-100 product-card">
+          <div class="price-tag">${{ product.price }}</div>
+          <img [src]="product.image.startsWith('http') ? product.image : 'assets/' + product.image" 
+            class="card-img-top" 
+            alt="{{ product.name }}">
+
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title product-name">{{ product.name }}</h5>
+            <p class="card-text">{{ product.gender }}</p>
+            <p class="card-text color-options">{{ product.colors.join(' / ') }}</p>
+
+            <div class="mb-2">
+              <app-rating 
+                [initialRating]="product.rating || 0" 
+                (ratingChange)="onRatingChange($event, product.id)">
+              </app-rating>
+            </div>
+
+            <button 
+              class="btn mt-auto" 
+              [ngClass]="isInCart(product.id) ? 'btn-secondary' : 'btn-add-cart'"
+              (click)="toggleCart(product)">
+              {{ isInCart(product.id) ? 'Added' : 'Add to Cart' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
